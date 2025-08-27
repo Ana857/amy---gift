@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-image: url(./img/kiss.jpg);
+    background-size: cover;
+    font-family: "Edu NSW ACT Hand", cursive;
+}
+
+/* ======================= */
+/* PAGINA DE START */
+/* ======================= */
+.div_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* min-height: 300px; */
+    border-radius: 10px;
+    background-color: #FF99CC;
+    border: 5px solid #FF66CC;
+    margin-top: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+    /* margin-bottom: 300px; */
+    padding: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.text_game {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* BUTOANE START */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.buttons button {
+    padding: 2vh 6vw;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s, background-color 0.3s;
+    font-family: "Edu NSW ACT Hand", cursive;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:active {
+    transform: scale(0.92);
+}
+
+.buttons .yesBtn {
+    background-color: #FF66CC;
+    color: #000;
+    font-size: 5vw;
+}
+
+.buttons .laterBtn {
+    background-color: #FF66CC;
+    color: #000;
+    font-size: 4.5vw;
+}
+
+@media screen and (min-width: 768px) {
+    .buttons .yesBtn {
+        font-size: 22px;
+        padding: 15px 40px;
+    }
+
+    .buttons .laterBtn {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+}
+
+/* FULLSCREEN MESSAGE */
+#fullscreenMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    color: white;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    white-space: pre-line; /* suportă text pe mai multe linii */
+}
+
+#fullscreenMessage.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* ======================= */
+/* PAGINA QUIZ */
+/* ======================= */
+
+/* Card quiz */
+.div_card.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    border-radius: 10px;
+    background-color: #FF99CC;
+    border: 5px solid #FF66CC;
+    margin-top: 200px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+/* Buton start quiz */
+.button_start {
+    color: black;
+    background-color: #FF99CC;
+    border: 8px #FF66CC solid;
+    width: 80%;
+    max-width: 300px;
+    font-size: 30px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button_start:hover {
+    transform: scale(1.05);
+}
+
+/* Good luck jos */
+.goodluck {
+    margin-top: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Întrebări */
+.question {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Răspunsuri */
+.answers {
+    display: none;
+}
+
+.answer {
+    position: absolute;
+    cursor: pointer;
+    padding: 8px 15px;
+    background-color: #ff66cc;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    transition: transform 0.5s, background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #ff1493;
+    color: #fff;
+}
+
+/* Cronometru */
+#timer {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff1493;
+}
+
+/* Mesaj final */
+.finalMessage {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    background: #32cd32;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
