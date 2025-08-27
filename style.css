@@ -146,7 +146,7 @@ body {
     border-radius: 10px;
     background-color: #FF99CC;
     border: 5px solid #FF66CC;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-right: 20px;
     margin-left: 20px;
     padding: 20px;
@@ -227,4 +227,14 @@ body {
     margin-top: 50px;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
     text-align: center;
+}
+
+
+@media (max-width: 502px){
+    .title{
+        font-size: 18px;
+    }
+    .buttons button {
+        margin: 0;
+    }
 }
